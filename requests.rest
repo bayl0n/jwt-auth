@@ -1,0 +1,40 @@
+### GET USER POSTS
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWlrZSIsImlhdCI6MTYxOTI4MjgxOCwiZXhwIjoxNjE5MjgyODMzfQ.UdL8bkIb5UNTF1tKdXItG5as8XOn5QGG-sA2HNWrcW0
+
+### Refresh access token
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWlrZSIsInBhc3N3b3JkIjoiJDJiJDEwJFRXMk1qandCdGdJSXBUTVRBSm9IUHVhSUlkcFJ3WnZBWXhRMFdPUGdVVGdNYWFLbUhia3hXIiwiaWF0IjoxNjE5MjgzMTUyfQ.Pt21Vn0mNqH8qUvZDyfSC-XfXh4SLT-IdGvZL4WxXAs"
+}
+
+### DELETE REFRESH TOKEN
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWlrZSIsInBhc3N3b3JkIjoiJDJiJDEwJFRXMk1qandCdGdJSXBUTVRBSm9IUHVhSUlkcFJ3WnZBWXhRMFdPUGdVVGdNYWFLbUhia3hXIiwiaWF0IjoxNjE5MjgzMTUyfQ.Pt21Vn0mNqH8qUvZDyfSC-XfXh4SLT-IdGvZL4WxXAs"
+}
+
+### GET ALL USERS
+GET http://localhost:5000/users
+
+### REGISTER USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "DonaldDuck",
+    "password": "quackquack mofo"
+}
+
+### LOGIN AUTH
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "name": "Mike",
+    "password": "shit"
+}
